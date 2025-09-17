@@ -1,0 +1,99 @@
+.menu {
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    place-items: center center;
+}
+
+#ham-icon {
+    width: 48px;
+    height: 48px;
+}
+
+#ham-icon:hover {
+    background-color: rgb(174, 174, 174);
+
+}
+
+.standard-text {
+    font-size: 24px;
+}
+
+.result-number {
+    grid-area: result-number;
+    font-size: 4vw;
+    text-align: right;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.memory-buttons-container {
+    display: flex;
+    flex-direction: row;
+    grid-area: memory-buttons-container;
+}
+
+button {
+    background-color: rgb(225, 225, 225);
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 20px;
+}
+
+.disable {
+    color: gray;
+}
+
+button:hover {
+    background-color: rgb(174, 174, 174);
+}
+
+.history {
+    grid-area: history;
+    box-sizing: border-box;
+}
+
+.history-button {
+    font-weight: bold;
+    display: inline;
+    padding: 8px 4px 8px 0;
+    text-decoration: none;
+    position: relative;
+    transform: 2s;
+}
+
+.history-button::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: orange;
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    transition: 0.5s;
+}
+
+.history-button:hover::after {
+    width: 92%;
+}
+
+.history-text {
+    margin-top: 12px;
+}
+
+@media screen and (max-width: 600px) {
+    #x3 {
+        display: none;
+    }
+
+    .history {
+        display: none;
+    }
+
+    body {
+        grid-template-areas: 'header' 'menu' 'result-number' 'memory-buttons' 'keys';
+        grid-auto-columns: auto;
+    }
+
+}
