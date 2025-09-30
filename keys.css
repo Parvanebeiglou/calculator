@@ -1,8 +1,6 @@
 .keys {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    float: left;
-    place-items: bottom;
     gap: 2px;
     grid-area: keys;
 }

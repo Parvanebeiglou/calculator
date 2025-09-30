@@ -30,19 +30,26 @@
 .memory-buttons-container {
     display: flex;
     flex-direction: row;
+    align-items: end;
     grid-area: memory-buttons-container;
 }
 
 button {
+    width: 88px;
+    height: 48px;
     background-color: rgb(225, 225, 225);
     border: none;
     font-size: 14px;
     font-weight: bold;
-    padding: 12px 20px;
+    margin: 4px;
 }
 
 .disable {
     color: gray;
+}
+
+.disable:hover {
+    background-color: transparent;
 }
 
 button:hover {

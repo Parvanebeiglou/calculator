@@ -1,9 +1,9 @@
 body {
+    height: 100vh;
     display: grid;
-    grid-template-areas: 'header header' 'menu history' 'result-number history' 'memory-buttons history' 'keys history';
+    grid-template-areas: 'header header' 'menu history' 'result-number history' 'memory-buttons-container history' 'keys history';
     background-color: rgb(225, 225, 225);
     padding: 4px;
-    grid-auto-columns: 1fr 320px;
-    grid-auto-rows: 1fr 1fr 1fr 1fr 420px;
-    align-items: stretch;
+    grid-template-columns: 1fr 320px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 420px;
 }
