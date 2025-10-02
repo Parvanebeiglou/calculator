@@ -3,33 +3,41 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 48px;
     align-items: center;
-    margin-left: 8px;
-    margin-right: 8px;
-    width: 100%;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 .left-section {
+    font-size: large;
     cursor: pointer;
 }
 
 .header-img {
     width: 44px;
     height: 44px;
+    cursor: pointer;
 }
 
 .header-img:hover {
     background-color: rgb(174, 174, 174);
 }
 
+.header-img:active {
+    background-color: rgb(150, 150, 150);
+}
+
 #close-tab:hover {
     background-color: rgb(232, 2, 2);
+}
+
+#close-tab:active {
+    background-color: rgb(188, 2, 2);
 }
 
 .right-section {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }

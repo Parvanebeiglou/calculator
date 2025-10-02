@@ -1,9 +1,9 @@
 body {
-    height: 100vh;
     display: grid;
     grid-template-areas: 'header header' 'menu history' 'result-number history' 'memory-buttons-container history' 'keys history';
-    background-color: rgb(225, 225, 225);
-    padding: 4px;
+    background-color: rgb(215, 215, 215);
     grid-template-columns: 1fr 320px;
     grid-template-rows: 1fr 1fr 1fr 1fr 420px;
+    margin: 0;
+    height: 100vh;
 }
