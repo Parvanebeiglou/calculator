@@ -6,11 +6,12 @@
     text-align: center;
     grid-area: keys;
     cursor: pointer;
+    padding: 4px;
 }
 
 .number {
     background-color: rgb(255, 255, 255);
-    font-size: 32px;
+    font-size: 26px;
     font-weight: bold;
     align-content: center;
 }
@@ -32,4 +33,63 @@
 
 .functional-key:active {
     background-color: rgb(185, 185, 185);
+}
+
+#backspace-outline,
+#division,
+#square-root,
+#change-sign,
+#multiplication,
+#x2,
+#minus,
+#x3,
+#plus,
+#x1,
+#equals {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#backspace-outline {
+    background-image: url(img/backspace-outline.svg);
+}
+
+#division {
+    background-image: url(img/division-key.svg);
+}
+
+#square-root {
+    background-image: url(img/square-root.svg);
+}
+
+#change-sign {
+    background-image: url(img/change-sign-key.svg);
+}
+
+#multiplication {
+    background-image: url(img/multiplication-key.svg);
+}
+
+#x2 {
+    background-image: url(img/x2.svg);
+}
+
+#minus {
+    background-image: url(img/minus-key.svg);
+}
+
+#x3 {
+    background-image: url(img/x3.svg);
+}
+
+#plus {
+    background-image: url(img/plus-key.svg);
+}
+
+#x1 {
+    background-image: url(img/1x.svg);
+}
+
+#equals {
+    background-image: url(img/equals-key.svg);
 }

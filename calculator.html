@@ -2,27 +2,25 @@
 <html>
   <head>
     <title>Calculator</title>
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="img/" />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="memory-buttons.css" />
     <link rel="stylesheet" href="keys.css" />
+    <link rel="stylesheet" href="history.css" />
   </head>
   <body>
     <header>
       <div class="left-section">Calculator</div>
-      <div class="right-section">
-        <img class="header-img" src="img/A5 - 10.svg" alt="Minimize" />
-        <img
-          class="header-img"
-          src="img/checkbox-blank-outline.svg"
-          alt="Maximize"
-        />
-        <img id="close-tab" class="header-img" src="img/A5 - 15.svg" />
+      <div class="right-section-container">
+        <div id="minimize" class="right-section"></div>
+        <div id="maximize" class="right-section"></div>
+        <div id="close" class="right-section"></div>
       </div>
     </header>
     <div class="menu">
-      <img id="ham-icon" src="img/A5 - 14.svg" />
+      <div id="ham-menu"></div>
       <p class="standard-text">Standard</p>
     </div>
     <div class="result-number">0</div>
@@ -32,47 +30,40 @@
       <button class="enable-memory-button">M+</button>
       <button class="enable-memory-button">M-</button>
       <button class="enable-memory-button">MS</button>
-      <button class="enable-memory-button">M'</button>
     </div>
     <div class="keys">
       <div class="functional-key">&#37;</div>
       <div class="functional-key">CE</div>
       <div class="functional-key">C</div>
-      <div class="functional-key">
-        <img src="img/backspace-outline.svg" alt="" />
-      </div>
-      <div class="functional-key"><img src="img/A5 - 9.svg" alt="" /></div>
-      <div class="functional-key">
-        <img src="img/A5 - 7.svg" alt="" />
-      </div>
+      <div id="backspace-outline" class="functional-key"></div>
+      <div id="division" class="functional-key"></div>
+      <div id="square-root" class="functional-key"></div>
       <div class="number">7</div>
       <div class="number">8</div>
       <div class="number">9</div>
-      <div class="functional-key"><img src="img/A5 - 15.svg" alt="" /></div>
-      <div class="functional-key">x<sup>2</sup></div>
+      <div id="multiplication" class="functional-key"></div>
+      <div id="x2" class="functional-key"></div>
       <div class="number">4</div>
       <div class="number">5</div>
       <div class="number">6</div>
-      <div class="functional-key"><img src="img/A5 - 10.svg" alt="" /></div>
-      <div id="x3" class="functional-key">x<sup>3</sup></div>
+      <div id="minus" class="functional-key"></div>
+      <div id="x3" class="functional-key"></div>
       <div class="number">1</div>
       <div class="number">2</div>
       <div class="number">3</div>
-      <div class="functional-key"><img src="img/A5 - 12.svg" alt="" /></div>
-      <div class="functional-key"><sup>1</sup>&#8725;<sub>x</sub></div>
-      <div class="functional-key">
-        <strong><sup>&#43;</sup>&#8725;<sub>&#8722;</sub></strong>
-      </div>
+      <div id="plus" class="functional-key"></div>
+      <div id="x1" class="functional-key"></div>
+      <div id="change-sign" class="functional-key"></div>
       <div class="number">0</div>
       <div class="functional-key"><strong>.</strong></div>
-      <div class="functional-key"><img src="img/A5 - 11.svg" alt="" /></div>
+      <div id="equals" class="functional-key"></div>
     </div>
     <div class="history">
-      <div>
+      <div class="history-button-container">
         <div class="history-button">History</div>
         <div class="history-button">Memory</div>
       </div>
-      <div class="history-text">There is no history here yet.</div>
+      <div class="history-text">There is no history here yet</div>
     </div>
   </body>
 </html>

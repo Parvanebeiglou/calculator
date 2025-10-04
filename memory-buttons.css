@@ -1,0 +1,36 @@
+.memory-buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+    grid-area: memory-buttons-container;
+}
+
+.enable-memory-button,
+.disable-memory-button {
+    height: 40px;
+    width: 80px;
+    background-color: rgb(215, 215, 215);
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.disable-memory-button {
+    color: gray;
+    cursor: default;
+}
+
+.disable-memory-button:hover {
+    background-color: transparent;
+}
+
+.enable-memory-button:hover {
+    background-color: rgb(174, 174, 174);
+}
+
+.enable-memory-button:active {
+    background-color: rgb(155, 155, 155);
+}

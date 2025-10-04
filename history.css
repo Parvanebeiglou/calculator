@@ -1,0 +1,43 @@
+.history {
+    grid-area: history;
+    box-sizing: border-box;
+    padding-top: 32px;
+}
+
+.history-button-container {
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.history-button {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 8px 8px 0;
+    text-decoration: none;
+    position: relative;
+    transform: 2s;
+    cursor: pointer;
+}
+
+.history-button::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: orange;
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    transition: 0.5s;
+}
+
+.history-button:hover::after {
+    width: 92%;
+}
+
+.history-text {
+    margin-top: 36px;
+    font-weight: bold;
+    font-size: 14px;
+}

@@ -4,40 +4,57 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-left: 4px;
+    margin-left: 12px;
     margin-right: 4px;
 }
 
 .left-section {
-    font-size: large;
+    font-size: 16px;
     cursor: pointer;
 }
 
-.header-img {
-    width: 44px;
-    height: 44px;
-    cursor: pointer;
-}
-
-.header-img:hover {
-    background-color: rgb(174, 174, 174);
-}
-
-.header-img:active {
-    background-color: rgb(150, 150, 150);
-}
-
-#close-tab:hover {
-    background-color: rgb(232, 2, 2);
-}
-
-#close-tab:active {
-    background-color: rgb(188, 2, 2);
-}
-
-.right-section {
+.right-section-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.right-section {
+    width: 48px;
+    height: 48px;
+    background-position: center;
+}
+
+#minimize {
+    background-image: url(img/minus-key.svg);
+    background-repeat: no-repeat;
+}
+
+#maximize {
+    background-image: url(img/maximize.svg);
+    background-repeat: no-repeat;
+}
+
+#close {
+    background-image: url(img/multiplication-key.svg);
+    background-repeat: no-repeat;
+}
+
+#maximize:hover,
+#minimize:hover {
+    background-color: rgb(174, 174, 174);
+}
+
+#maximize:active,
+#minimize:active {
+    background-color: rgb(150, 150, 150);
+}
+
+#close:hover {
+    background-color: rgb(232, 2, 2);
+}
+
+#close:active {
+    background-color: rgb(188, 2, 2);
 }
