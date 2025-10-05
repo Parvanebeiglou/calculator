@@ -10,7 +10,6 @@ header {
 
 .left-section {
     font-size: 16px;
-    cursor: pointer;
 }
 
 .right-section-container {
@@ -44,17 +43,21 @@ header {
 #maximize:hover,
 #minimize:hover {
     background-color: rgb(174, 174, 174);
+    transition: background-color 0.4s;
 }
 
 #maximize:active,
 #minimize:active {
-    background-color: rgb(150, 150, 150);
+    background-color: rgb(140, 140, 140);
+    transition: background-color 0.4s;
 }
 
 #close:hover {
     background-color: rgb(232, 2, 2);
+    transition: background-color 0.4s;
 }
 
 #close:active {
     background-color: rgb(188, 2, 2);
+    transition: background-color 0.4s;
 }

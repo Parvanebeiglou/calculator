@@ -14,7 +14,7 @@
     border: none;
     font-size: 13px;
     font-weight: bold;
-    margin: 4px;
+    margin: 2px;
     cursor: pointer;
 }
 
@@ -29,8 +29,11 @@
 
 .enable-memory-button:hover {
     background-color: rgb(174, 174, 174);
+    transition: background-color 0.4s;
+
 }
 
 .enable-memory-button:active {
-    background-color: rgb(155, 155, 155);
+    background-color: rgb(140, 140, 140);
+    transition: background-color 0.4s;
 }

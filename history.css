@@ -5,7 +5,6 @@
 }
 
 .history-button-container {
-    width: 320px;
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -34,6 +33,12 @@
 
 .history-button:hover::after {
     width: 92%;
+}
+
+.history-button:active {
+    color: orange;
+    transition: color 0.01s;
+
 }
 
 .history-text {

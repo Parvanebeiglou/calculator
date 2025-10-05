@@ -19,10 +19,12 @@
 .number:hover,
 .functional-key:hover {
     background-color: rgb(202, 202, 202);
+    transition: background-color 0.4s;
 }
 
 .number:active {
-    background-color: rgb(185, 185, 185);
+    background-color: rgb(180, 180, 180);
+    transition: background-color 0.4s;
 }
 
 .functional-key {
@@ -32,7 +34,8 @@
 }
 
 .functional-key:active {
-    background-color: rgb(185, 185, 185);
+    background-color: rgb(170, 170, 170);
+    transition: background-color 0.4s;
 }
 
 #backspace-outline,
