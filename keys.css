@@ -6,49 +6,41 @@
     text-align: center;
     grid-area: keys;
     cursor: pointer;
-    padding: 4px;
+    padding: 0 4px 4px;
+    transition: background-color 0.4s;
 }
 
 .number {
     background-color: rgb(255, 255, 255);
     font-size: 26px;
     font-weight: bold;
+    border-radius: 2px;
     align-content: center;
+    transition: background-color 0.4s;
 }
 
 .number:hover,
 .functional-key:hover {
     background-color: rgb(202, 202, 202);
-    transition: background-color 0.4s;
 }
 
 .number:active {
     background-color: rgb(180, 180, 180);
-    transition: background-color 0.4s;
 }
 
 .functional-key {
     background-color: rgb(234, 234, 234);
     font-size: 20px;
+    border-radius: 2px;
     align-content: center;
+    transition: background-color 0.4s;
 }
 
 .functional-key:active {
     background-color: rgb(170, 170, 170);
-    transition: background-color 0.4s;
 }
 
-#backspace-outline,
-#division,
-#square-root,
-#change-sign,
-#multiplication,
-#x2,
-#minus,
-#x3,
-#plus,
-#x1,
-#equals {
+.keys div {
     background-repeat: no-repeat;
     background-position: center;
 }

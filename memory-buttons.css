@@ -1,8 +1,6 @@
 .memory-buttons-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 40%;
+    gap: 4px;
     grid-area: memory-buttons-container;
 }
 
@@ -14,8 +12,10 @@
     border: none;
     font-size: 13px;
     font-weight: bold;
-    margin: 2px;
+    border-radius: 2px;
     cursor: pointer;
+    align-content: center;
+    transition: background-color 0.4s;
 }
 
 .disable-memory-button {
@@ -29,11 +29,9 @@
 
 .enable-memory-button:hover {
     background-color: rgb(174, 174, 174);
-    transition: background-color 0.4s;
 
 }
 
 .enable-memory-button:active {
     background-color: rgb(140, 140, 140);
-    transition: background-color 0.4s;
 }

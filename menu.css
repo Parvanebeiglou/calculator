@@ -7,22 +7,25 @@
 }
 
 
-#ham-menu {
+.ham-menu {
     background-image: url(img/ham-menu.svg);
     background-repeat: no-repeat;
     width: 48px;
     height: 48px;
+    border-radius: 2px;
+    margin-right: 8px;
     cursor: pointer;
+    transition: background-color 0.4s;
 }
 
-#ham-menu:hover {
+.ham-menu:hover,
+.minimize-icon:hover {
     background-color: rgb(174, 174, 174);
-    transition: background-color 0.4s;
 }
 
-#ham-menu:active {
+.ham-menu:active,
+.minimize-icon:active {
     background-color: rgb(140, 140, 140);
-    transition: background-color 0.4s;
 }
 
 .standard-text {
@@ -30,10 +33,22 @@
     font-weight: 400;
 }
 
+.minimize-icon {
+    background-image: url(img/minimize.svg);
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    border-radius: 2px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
 .result-number {
     grid-area: result-number;
-    font-size: 4vw;
+    font-size: 64px;
     text-align: right;
-    align-content: center;
+    align-content: end;
     padding-right: 20px;
+    padding-bottom: 12px;
 }

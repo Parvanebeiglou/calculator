@@ -1,7 +1,6 @@
 header {
     grid-area: header;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-left: 12px;
@@ -14,7 +13,6 @@ header {
 
 .right-section-container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -25,39 +23,40 @@ header {
     background-position: center;
 }
 
+#minimize,
+#maximize,
+#close {
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    transition: background-color 0.4s;
+}
+
 #minimize {
     background-image: url(img/minus-key.svg);
-    background-repeat: no-repeat;
 }
 
 #maximize {
     background-image: url(img/maximize.svg);
-    background-repeat: no-repeat;
 }
 
 #close {
     background-image: url(img/multiplication-key.svg);
-    background-repeat: no-repeat;
 }
 
 #maximize:hover,
 #minimize:hover {
     background-color: rgb(174, 174, 174);
-    transition: background-color 0.4s;
 }
 
 #maximize:active,
 #minimize:active {
     background-color: rgb(140, 140, 140);
-    transition: background-color 0.4s;
 }
 
 #close:hover {
     background-color: rgb(232, 2, 2);
-    transition: background-color 0.4s;
 }
 
 #close:active {
     background-color: rgb(188, 2, 2);
-    transition: background-color 0.4s;
 }
