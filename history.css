@@ -1,6 +1,8 @@
 .history {
     grid-area: history;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .history-button-container {
@@ -34,4 +36,17 @@
     margin-top: 28px;
     font-weight: bold;
     font-size: 14px;
+}
+
+@media (max-width:500px) {
+    .history {
+        display: none !important;
+
+    }
+}
+
+@media(min-width:500px) {
+    .history {
+        width: 1fr;
+    }
 }

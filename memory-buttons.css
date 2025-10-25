@@ -1,6 +1,6 @@
 .memory-buttons-container {
     display: flex;
-    gap: 4px;
+    gap: 20px;
     grid-area: memory-buttons-container;
 }
 

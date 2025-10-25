@@ -12,4 +12,12 @@ body {
     margin: 0;
     padding: 0;
     user-select: none;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width:500px) {
+    body {
+        grid-template-areas: 'header' 'menu' 'result-number ' 'memory-buttons-container' 'keys';
+        grid-template-columns: 1fr;
+    }
 }
