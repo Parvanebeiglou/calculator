@@ -1,0 +1,147 @@
+.keys {
+    height: 100%;
+    min-height: 300px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2px;
+    text-align: center;
+    grid-area: keys;
+    cursor: pointer;
+    padding: 0 4px 4px;
+    transition: background-color 0.4s;
+}
+
+.number {
+    background-color: rgb(255, 255, 255);
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 2px;
+    align-content: center;
+    transition: background-color 0.4s;
+}
+
+.number:hover,
+.functional-key:hover {
+    background-color: rgb(202, 202, 202);
+}
+
+.number:active {
+    background-color: rgb(180, 180, 180);
+}
+
+.functional-key {
+    background-color: rgb(234, 234, 234);
+    font-size: 20px;
+    border-radius: 2px;
+    align-content: center;
+    transition: background-color 0.4s;
+}
+
+.functional-key:active {
+    background-color: rgb(170, 170, 170);
+}
+
+.keys div {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#backspace-outline {
+    background-image: url(../img/backspace-outline.svg);
+}
+
+#division {
+    background-image: url(../img/division-key.svg);
+}
+
+#square-root {
+    background-image: url(../img/square-root.svg);
+}
+
+#change-sign {
+    background-image: url(../img/change-sign-key.svg);
+}
+
+#multiplication {
+    background-image: url(../img/multiplication-key.svg);
+}
+
+#x2 {
+    background-image: url(../img/x2.svg);
+}
+
+#minus {
+    background-image: url(../img/minus-key.svg);
+}
+
+#x3 {
+    background-image: url(../img/x3.svg);
+}
+
+#plus {
+    background-image: url(../img/plus-key.svg);
+}
+
+#x1 {
+    background-image: url(../img/1x.svg);
+}
+
+#equals {
+    background-image: url(../img/equals-key.svg);
+}
+
+@media only screen and (max-width:1024px),
+(max-height:620px) {
+    .keys {
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #x3 {
+        display: none;
+    }
+
+    #percentage {
+        grid-column: 1/2;
+        grid-row: 1;
+    }
+
+    #square-root {
+        grid-column: 2/3;
+        grid-row: 1;
+
+    }
+
+    #x2 {
+        grid-column: 3/4;
+        grid-row: 1;
+    }
+
+    #x1 {
+        grid-column: 4/5;
+        grid-row: 1;
+    }
+
+    #ce {
+        grid-column: 1/2;
+        grid-row: 2;
+    }
+
+    #c {
+        grid-column: 2/3;
+        grid-row: 2;
+    }
+
+    #backspace-outline {
+        grid-column: 3/4;
+        grid-auto-rows: 2;
+    }
+
+    #division {
+        grid-column: 4/5;
+        grid-row: 2;
+    }
+
+}
