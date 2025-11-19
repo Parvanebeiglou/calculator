@@ -91,7 +91,7 @@
     background-image: url(../img/equals-key.svg);
 }
 
-@media only screen and (max-width:1024px),
+@media screen and (max-width:1024px),
 (max-height:620px) {
     .keys {
         display: grid;

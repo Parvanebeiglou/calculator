@@ -39,7 +39,7 @@
     font-size: 14px;
 }
 
-@media (max-width:640px) {
+@media screen and (max-width:640px) {
     .history {
         display: none !important;
 

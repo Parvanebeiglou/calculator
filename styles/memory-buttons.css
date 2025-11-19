@@ -6,10 +6,11 @@
     margin: 0 4px 0;
 }
 
-.memory-buttons-box{
+.memory-buttons-box {
     display: flex;
     width: 50%;
 }
+
 .enable-memory-button,
 .disable-memory-button {
     height: 40px;
@@ -41,7 +42,8 @@
 .enable-memory-button:active {
     background-color: rgb(140, 140, 140);
 }
-@media (max-width:740px) {
+
+@media screen and (max-width:740px) {
     .memory-buttons-box {
         width: 100%;
     }
