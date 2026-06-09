@@ -104,44 +104,99 @@
     }
 
     #percentage {
-        grid-column: 1;
-        grid-row: 1;
+        order: 1;
     }
 
     #square-root {
-        grid-column: 2;
-        grid-row: 1;
+        order: 2;
 
     }
 
     #x2 {
-        grid-column: 3;
-        grid-row: 1;
+        order: 3;
     }
 
     #x1 {
-        grid-column: 4;
-        grid-row: 1;
+        order: 4;
     }
 
     #ce {
-        grid-column: 1;
-        grid-row: 2;
+        order: 5;
     }
 
     #c {
-        grid-column: 2;
-        grid-row: 2;
+        order: 6;
     }
 
     #backspace-outline {
-        grid-column: 3;
-        grid-auto-rows: 2;
+        order: 7;
     }
 
     #division {
-        grid-column: 4;
-        grid-row: 2;
+        order: 8;
     }
 
+    #seven {
+        order: 9;
+    }
+
+    #eight {
+        order: 10;
+    }
+
+    #nine {
+        order: 11;
+    }
+
+    #multiplication {
+        order: 12;
+    }
+
+    #four {
+        order: 13;
+    }
+
+    #five {
+        order: 14;
+    }
+
+    #six {
+        order: 15;
+    }
+
+    #minus {
+        order: 16;
+    }
+
+    #one {
+        order: 17;
+    }
+
+    #two {
+        order: 18;
+    }
+
+    #three {
+        order: 19;
+    }
+
+    #plus {
+        order: 20;
+    }
+
+    #change-sign {
+        order: 21;
+    }
+
+    #zero {
+        order: 22;
+    }
+
+    #dot {
+        order: 23;
+    }
+
+    #equals {
+        order: 24;
+    }
 }
