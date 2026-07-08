@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-theme="light">
   <head>
     <title>Calculator</title>
     <link rel="stylesheet" href="../img/" />
@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="styles/memory-buttons.css" />
     <link rel="stylesheet" href="styles/keys.css" />
     <link rel="stylesheet" href="styles/history.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
@@ -21,19 +27,17 @@
       </div>
     </header>
     <div class="menu">
-      <div class="ham-menu"></div>
+      <div id="theme-toggle" class="ham-menu"></div>
       <p class="standard-text">Standard</p>
       <div class="minimize-icon"></div>
     </div>
-    <div id="result" class="result-number">0</div>
+    <div class="result-number">0</div>
     <div class="memory-buttons-container">
-      <div class="memory-buttons-box">
-        <button class="disable-memory-button">MC</button>
-        <button class="disable-memory-button">MR</button>
-        <button class="enable-memory-button">M+</button>
-        <button class="enable-memory-button">M-</button>
-        <button class="enable-memory-button">MS</button>
-      </div>
+      <button class="disable-memory-button">MC</button>
+      <button class="disable-memory-button">MR</button>
+      <button class="enable-memory-button">M+</button>
+      <button class="enable-memory-button">M-</button>
+      <button class="enable-memory-button">MS</button>
     </div>
     <div class="keys">
       <div id="percentage" class="functional-key">&#37;</div>
@@ -42,46 +46,25 @@
       <div id="backspace-outline" class="functional-key"></div>
       <div id="division" class="functional-key"></div>
       <div id="square-root" class="functional-key"></div>
-      <div onclick="updateCalculation('7')" id="seven" class="number">7</div>
-      <div onclick="updateCalculation('8')" id="eight" class="number">8</div>
-      <div onclick="updateCalculation('9')" id="nine" class="number">9</div>
+      <div id="seven" class="number">7</div>
+      <div id="eight" class="number">8</div>
+      <div id="nine" class="number">9</div>
       <div id="multiplication" class="functional-key"></div>
       <div id="x2" class="functional-key"></div>
-      <div onclick="updateCalculation('4')" id="four" class="number">4</div>
-      <div onclick="updateCalculation('5')" id="five" class="number">5</div>
-      <div onclick="updateCalculation('6')" id="six" class="number">6</div>
-      <div
-        onclick="updateCalculation('-')"
-        id="minus"
-        class="functional-key"
-      ></div>
-      <div
-        onclick="updateCalculation('x3')"
-        id="x3"
-        class="functional-key"
-      ></div>
-      <div onclick="updateCalculation('1')" id="one" class="number">1</div>
-      <div onclick="updateCalculation('2')" id="two" class="number">2</div>
-      <div onclick="updateCalculation('3')" id="three" class="number">3</div>
-      <div
-        onclick="updateCalculation('+')"
-        id="plus"
-        class="functional-key"
-      ></div>
+      <div id="four" class="number">4</div>
+      <div id="five" class="number">5</div>
+      <div id="six" class="number">6</div>
+      <div id="minus" class="functional-key"></div>
+      <div id="x3" class="functional-key"></div>
+      <div id="one" class="number">1</div>
+      <div id="two" class="number">2</div>
+      <div id="three" class="number">3</div>
+      <div id="plus" class="functional-key"></div>
       <div id="x1" class="functional-key"></div>
       <div id="change-sign" class="functional-key"></div>
-      <div onclick="updateCalculation('0')" id="zero" class="number">0</div>
-      <div onclick="updateCalculation('.')" id="dot" class="functional-key">
-        <strong>.</strong>
-      </div>
-      <div
-        onclick="
-          calculation = eval(calculation);
-          console.log(calculation);
-        "
-        id="equals"
-        class="functional-key"
-      ></div>
+      <div id="zero" class="number">0</div>
+      <div id="dot" class="functional-key"><strong>.</strong></div>
+      <div id="equals" class="functional-key"></div>
     </div>
     <div class="history">
       <div class="history-button-container">
@@ -91,11 +74,16 @@
       <div class="history-text">There is no history here yet</div>
     </div>
     <script>
-      let calculation = '';
-      function updateCalculation(value) {
-        calculation += value;
-        console.log(calculation);
-      }
+      const root = document.documentElement;
+      const toggle = document.getElementById('theme-toggle');
+
+      const themes = ['light', 'dark', 'green', 'blue'];
+      let index = 0;
+
+      toggle.addEventListener('click', () => {
+        index = (index + 1) % themes.length;
+        root.setAttribute('data-theme', themes[index]);
+      });
     </script>
   </body>
 </html>

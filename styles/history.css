@@ -1,3 +1,4 @@
+
 .history {
     grid-area: history;
     box-sizing: border-box;
@@ -39,9 +40,8 @@
     font-size: 14px;
 }
 
-@media screen and (max-width:640px) {
+@media (max-width:640px) {
     .history {
-        display: none !important;
-
+        display: none;
     }
 }

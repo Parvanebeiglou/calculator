@@ -1,32 +1,51 @@
-.memory-buttons-container {
-    display: flex;
-    gap: 4px;
-    grid-area: memory-buttons-container;
-    max-width: 100%;
-    margin: 0 4px 0;
+[data-theme="dark"] {
+    --memory-bg: #2b2b2b;
+    --memory-hover: #3b3b3b;
+    --memory-active: #4d4d4d;
+    --memory-text:white;
 }
 
-.memory-buttons-box {
+[data-theme="green"] {
+    --memory-bg: #c8d776;
+    --memory-hover: #4f9541;
+    --memory-active: #3c7132;
+    --memory-radius-small: 40px;
+    --memory-disable: #7a9c71;
+    --font-family: "Exo 2", sans-serif;
+}
+
+[data-theme="blue"] {
+    --memory-bg: #b7d9e7;
+    --memory-hover: #046ab8;
+    --memory-active: #034a81;
+    --memory-radius-small: 24px 2px;
+}
+
+.memory-buttons-container {
     display: flex;
-    width: 50%;
+    justify-content: space-between;
+    gap: 2px;
+    grid-area: memory-buttons-container;
+    max-width: 50%;
+    margin: 0 4px 0;
 }
 
 .enable-memory-button,
 .disable-memory-button {
     height: 40px;
-    width: 100%;
-    background-color: rgb(215, 215, 215);
+    width: 92px;
+    background-color: var(--memory-bg);
     border: none;
+    font-family: var(--font-family);
     font-size: 13px;
     font-weight: bold;
-    border-radius: 2px;
+    border-radius: var(--memory-radius-small);
     cursor: pointer;
-    align-content: center;
     transition: background-color 0.4s;
 }
 
 .disable-memory-button {
-    color: gray;
+    color: var(--memory-disable);
     cursor: default;
 }
 
@@ -35,16 +54,15 @@
 }
 
 .enable-memory-button:hover {
-    background-color: rgb(174, 174, 174);
-
+    background-color: var(--memory-hover);
 }
 
 .enable-memory-button:active {
-    background-color: rgb(140, 140, 140);
+    background-color: var(--memory-active);
 }
 
-@media screen and (max-width:740px) {
-    .memory-buttons-box {
-        width: 100%;
+@media (max-width:740px) {
+    .memory-buttons-container {
+        max-width: 100%;
     }
 }

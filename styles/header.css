@@ -1,3 +1,22 @@
+[data-theme="dark"] {
+    --header-bg-color: #3b3b3b;
+    --header-bg-active: #4d4d4d;
+    --header-max-image: url(../img/checkbox-blank-outline-dark.svg);
+    --header-min-image: url(../img/minus-dark.svg);
+    --header-close-image:url(../img/multiplication-dark.svg);
+}
+
+[data-theme="green"] {
+    --header-bg-hover: #4f9541;
+    --header-bg-active: #3c7132;
+}
+
+[data-theme="blue"] {
+    --header-bg-hover: #046ab8;
+    --header-bg-active: #034a81;
+    --header-radius-small: 24px 2px;
+}
+
 header {
     grid-area: header;
     display: flex;
@@ -26,31 +45,31 @@ header {
 #minimize,
 #maximize,
 #close {
-    border-radius: 2px;
+    border-radius: var(--header-radius-small);
     background-repeat: no-repeat;
     transition: background-color 0.4s;
 }
 
 #minimize {
-    background-image: url(../img/minus-key.svg);
+    background-image: var(--header-min-image);
 }
 
 #maximize {
-    background-image: url(../img/maximize.svg);
+    background-image: var(--header-max-image);
 }
 
 #close {
-    background-image: url(../img/multiplication-key.svg);
+    background-image: var(--header-close-image);
 }
 
 #maximize:hover,
 #minimize:hover {
-    background-color: rgb(174, 174, 174);
+    background-color: var(--header-bg-hover);
 }
 
 #maximize:active,
 #minimize:active {
-    background-color: rgb(140, 140, 140);
+    background-color: var(--header-bg-active);
 }
 
 #close:hover {

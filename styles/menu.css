@@ -1,3 +1,19 @@
+[data-theme="dark"] {
+    --menu-ham-image: url(../img/ham-menu-dark.svg);
+    --menu-minimize-image: url(../img/minimaze-dark.svg);
+    --menu-bg-hover:#3b3b3b;
+    --menu-bg-active:#4d4d4d;
+}
+[data-theme="green"] {
+    --menu-bg-hover:#4f9541;
+    --menu-bg-active:#3c7132;
+    --menu-radius-small: 20px;
+}
+[data-theme="blue"] {
+    --menu-bg-hover:#046ab8;
+    --menu-bg-active:#034a81;
+    --menu-radius-small: 24px 2px;;
+}
 .menu {
     grid-area: menu;
     display: flex;
@@ -8,11 +24,11 @@
 
 
 .ham-menu {
-    background-image: url(../img/ham-menu.svg);
+    background-image: var(--menu-ham-image);
     background-repeat: no-repeat;
     width: 48px;
     height: 48px;
-    border-radius: 2px;
+    border-radius: var(--menu-radius-small);
     margin-right: 8px;
     cursor: pointer;
     transition: background-color 0.4s;
@@ -20,12 +36,12 @@
 
 .ham-menu:hover,
 .minimize-icon:hover {
-    background-color: rgb(174, 174, 174);
+    background-color: var(--menu-bg-hover);
 }
 
 .ham-menu:active,
 .minimize-icon:active {
-    background-color: rgb(140, 140, 140);
+    background-color: var(--menu-bg-active);
 }
 
 .standard-text {
@@ -34,11 +50,11 @@
 }
 
 .minimize-icon {
-    background-image: url(../img/minimize.svg);
+    background-image: var(--menu-minimize-image);
     background-repeat: no-repeat;
     width: 48px;
     height: 48px;
-    border-radius: 2px;
+    border-radius: var(--menu-radius-small);
     margin-left: 8px;
     cursor: pointer;
     transition: background-color 0.4s;

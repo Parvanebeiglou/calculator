@@ -1,10 +1,71 @@
+:root {
+    /* Light */
+    --font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --body-bg: #d7d7d7;
+    --header-bg-hover: rgb(174, 174, 174);
+    --header-bg-active: rgb(140, 140, 140);
+    --header-min-image: url(../img/minus-key.svg);
+    --header-max-image: url(../img/maximize.svg);
+    --header-close-image: url(../img/multiplication-key.svg);
+    --header-radius-small: 2px;
+    --key-bg: #ffffff;
+    --key-bg-functional: #eaeaea;
+    --key-hover: #cacaca;
+    --key-active: #b4b4b4;
+    --text-color: #000000;
+    --calculator-bg: #f7f7f7;
+    --keys-radius-small: 2px;
+    --keys-bg-outline: url(../img/backspace-outline.svg);
+    --keys-bg-division: url(../img/division-key.svg);
+    --keys-bg-square: url(../img/square-root.svg);
+    --keys-bg-change: url(../img/change-sign-key.svg);
+    --keys-bg-multiplication: url(../img/multiplication-key.svg);
+    --keys-bg-x2: url(../img/x2.svg);
+    --keys-bg-minus: url(../img/minus-key.svg);
+    --keys-bg-x3: url(../img/x3.svg);
+    --keys-bg-plus: url(../img/plus-key.svg);
+    --keys-bg-x1: url(../img/1x.svg);
+    --keys-bg-equals: url(../img/equals-key.svg);
+    --memory-bg: #d7d7d7;
+    --memory-hover: #aeaeae;
+    --memory-active: #8c8c8c;
+    --memory-radius-small: 2px;
+    --memory-width: 100%;
+    --memory-disable:grey;
+    --menu-ham-image: url(../img/ham-menu.svg);
+    --menu-minimize-image: url(../img/minimize.svg);
+    --menu-bg-hover: rgb(174, 174, 174);
+    --menu-bg-active: rgb(140, 140, 140);
+    --menu-radius-small:2px;
+}
+
+/*Dark*/
+[data-theme="dark"] {
+    --body-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --font-family: "Tektur", sans-serif;
+}
+
+/*Green*/
+[data-theme="green"] {
+    --body-bg: #c8d776;
+    --text-color: #000000;
+    --font-family: "Exo 2", sans-serif;
+}
+
+/*blue*/
+[data-theme="blue"] {
+    --body-bg: #b7d9e7;
+}
+
 body {
     height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-family);
+    color: var(--text-color);
     display: grid;
     grid-template-areas: 'header header' 'menu history' 'result-number history' 'memory-buttons-container history' 'keys history';
-    background-color: rgb(215, 215, 215);
-    grid-template-columns: 3.79fr 1fr;
+    background-color: var(--body-bg);
+    grid-template-columns: 3.92fr 1fr;
     grid-template-rows: 48px 44px 2fr 44px 5fr;
 }
 
@@ -15,20 +76,20 @@ body {
     box-sizing: border-box;
 }
 
-@media screen and (max-width:640px) {
+@media only screen and (max-width:640px) {
     body {
         grid-template-areas: 'header' 'menu' 'result-number ' 'memory-buttons-container' 'keys';
         grid-template-columns: 1fr;
     }
 }
 
-@media screen and (min-width:641px) {
+@media only screen and (min-width:641px) {
     body {
         grid-template-columns: 3fr 1.35fr;
     }
 }
 
-@media screen and (min-width:1024px) {
+@media only screen and (min-width:1024px) {
     body {
         grid-template-columns: 1fr 320px;
     }

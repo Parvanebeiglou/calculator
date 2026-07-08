@@ -1,3 +1,43 @@
+[data-theme="dark"] {
+    --key-bg: #2b2b2b;
+    --key-bg-functional: #3a3a3a;
+    --key-hover: #555555;
+    --key-active: #444444;
+    --text-color: #ffffff;
+    --calculator-bg: #1e1e1e;
+    --keys-bg-outline: url(../img/backspace-outline-dark.svg);
+    --keys-bg-division: url(../img/division-dark.svg);
+    --keys-bg-square: url(../img/square\ root-dark.svg);
+    --keys-bg-change: url(../img/change-dark.svg);
+    --keys-bg-multiplication: url(../img/multiplication-dark.svg);
+    --keys-bg-x2: url(../img/x2-dark.svg);
+    --keys-bg-minus: url(../img/minus-dark.svg);
+    --keys-bg-x3: url(../img/x3-dark.svg);
+    --keys-bg-plus: url(../img/plus-dark.svg);
+    --keys-bg-x1: url(../img/x1-dark.svg);
+    --keys-bg-equals: url(../img/equals-dark.svg);
+}
+
+[data-theme="green"] {
+    --key-bg: #a5d046;
+    --key-bg-functional: #7bbc3f;
+    --key-hover: #4f9541;
+    --key-active: #2a6f1d;
+    --text-color: #000000;
+    --calculator-bg: #c8d776;
+    --keys-radius-small: 40px;
+}
+
+[data-theme="blue"] {
+    --key-bg: #7cc6e1;
+    --key-bg-functional: #4fb7e1;
+    --key-hover: #016ab7;
+    --key-active: #02487a;
+    --text-color: #000000;
+    --calculator-bg: #b7d9e7;
+    --keys-radius-small: 24px 2px;
+}
+
 .keys {
     height: 100%;
     min-height: 300px;
@@ -13,33 +53,33 @@
 }
 
 .number {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--key-bg);
     font-size: 26px;
     font-weight: bold;
-    border-radius: 2px;
+    border-radius: var(--keys-radius-small);
     align-content: center;
     transition: background-color 0.4s;
 }
 
 .number:hover,
 .functional-key:hover {
-    background-color: rgb(202, 202, 202);
+    background-color: var(--key-hover);
 }
 
 .number:active {
-    background-color: rgb(180, 180, 180);
+    background-color: var(--key-active);
 }
 
 .functional-key {
-    background-color: rgb(234, 234, 234);
+    background-color: var(--key-bg-functional);
     font-size: 20px;
-    border-radius: 2px;
+    border-radius: var(--keys-radius-small);
     align-content: center;
     transition: background-color 0.4s;
 }
 
 .functional-key:active {
-    background-color: rgb(170, 170, 170);
+    background-color: var(--key-active);
 }
 
 .keys div {
@@ -48,48 +88,49 @@
 }
 
 #backspace-outline {
-    background-image: url(../img/backspace-outline.svg);
+    background-image: var(--keys-bg-outline);
 }
 
 #division {
-    background-image: url(../img/division-key.svg);
+    background-image: var(--keys-bg-division);
 }
 
 #square-root {
-    background-image: url(../img/square-root.svg);
+    background-image: var(--keys-bg-square);
 }
 
 #change-sign {
-    background-image: url(../img/change-sign-key.svg);
+    background-image: var(--keys-bg-change);
 }
 
 #multiplication {
-    background-image: url(../img/multiplication-key.svg);
+    background-image: var(--keys-bg-multiplication);
 }
 
 #x2 {
-    background-image: url(../img/x2.svg);
+    background-image: var(--keys-bg-x2);
 }
 
 #minus {
-    background-image: url(../img/minus-key.svg);
+    background-image: var(--keys-bg-minus);
 }
 
 #x3 {
-    background-image: url(../img/x3.svg);
+    background-image: var(--keys-bg-x3);
 }
 
 #plus {
-    background-image: url(../img/plus-key.svg);
+    background-image: var(--keys-bg-plus);
 }
 
 #x1 {
-    background-image: url(../img/1x.svg);
+    background-image: var(--keys-bg-x1);
 }
 
 #equals {
-    background-image: url(../img/equals-key.svg);
+    background-image: var(--keys-bg-equals);
 }
+
 
 @media screen and (max-width:1024px),
 (max-height:620px) {
@@ -109,7 +150,6 @@
 
     #square-root {
         order: 2;
-
     }
 
     #x2 {
