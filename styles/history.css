@@ -99,6 +99,8 @@
     background-image: var(--history-trash-image);
     background-repeat: no-repeat;
     padding: 20px 20px;
+    margin-right: 4px;
+    margin-bottom: 4px;
     align-self: flex-end;
 }
 
