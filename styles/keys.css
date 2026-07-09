@@ -16,6 +16,8 @@
     --keys-bg-plus: url(../img/plus-dark.svg);
     --keys-bg-x1: url(../img/x1-dark.svg);
     --keys-bg-equals: url(../img/equals-dark.svg);
+    --keys-radius-small: 20px 20px 2px 2px;
+    --keys-shadow: 4px 4px 4px 4px rgb(20, 20, 20);
 }
 
 [data-theme="green"] {
@@ -59,6 +61,7 @@
     border-radius: var(--keys-radius-small);
     align-content: center;
     transition: background-color 0.4s;
+    box-shadow: var(--keys-shadow);
 }
 
 .number:hover,
@@ -71,11 +74,13 @@
 }
 
 .functional-key {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--key-bg-functional);
     font-size: 20px;
     border-radius: var(--keys-radius-small);
     align-content: center;
     transition: background-color 0.4s;
+    box-shadow: var(--keys-shadow);
 }
 
 .functional-key:active {

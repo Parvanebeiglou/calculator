@@ -1,6 +1,6 @@
 :root {
     /* Light */
-    --font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --body-bg: #d7d7d7;
     --header-bg-hover: rgb(174, 174, 174);
     --header-bg-active: rgb(140, 140, 140);
@@ -26,17 +26,26 @@
     --keys-bg-plus: url(../img/plus-key.svg);
     --keys-bg-x1: url(../img/1x.svg);
     --keys-bg-equals: url(../img/equals-key.svg);
+    --keys-shadow: 0;
     --memory-bg: #d7d7d7;
     --memory-hover: #aeaeae;
     --memory-active: #8c8c8c;
     --memory-radius-small: 2px;
     --memory-width: 100%;
-    --memory-disable:grey;
+    --memory-disable: grey;
+    --memory-text: black;
     --menu-ham-image: url(../img/ham-menu.svg);
     --menu-minimize-image: url(../img/minimize.svg);
     --menu-bg-hover: rgb(174, 174, 174);
     --menu-bg-active: rgb(140, 140, 140);
-    --menu-radius-small:2px;
+    --menu-radius-small: 2px;
+    --history-bg-hover: rgb(174, 174, 174);
+    --history-bg-active:rgb(140, 140, 140);
+    --history-button-hover:orange;
+    --history-button-line:orange;
+    --history-button-active:rgb(161, 105, 0);
+    --history-radius-small:2px;
+    --history-trash-image:url(../img/delete-outline.svg);
 }
 
 /*Dark*/
@@ -56,6 +65,7 @@
 /*blue*/
 [data-theme="blue"] {
     --body-bg: #b7d9e7;
+    --font-family: "Turret Road", sans-serif;
 }
 
 body {

@@ -1,9 +1,43 @@
+[data-theme="dark"] {
+    --history-bg-hover: #3b3b3b;
+    --history-bg-active: #444444;
+    --history-button-line: #d82b79;
+    --history-radius-small: 20px 20px 2px 2px;
+    --history-button-hover: #d82b79;
+    --history-button-active: #9e1e58;
+    --history-trash-image: url(../img/delete-outline-dark.svg);
+}
+
+[data-theme="green"] {
+    --history-bg-hover: #4f9541;
+    --history-bg-active: #2a6f1d;
+    --history-button-line: #3c7132;
+    --history-button-hover: #225817;
+    --history-radius-small: 40px;
+}
+
+[data-theme="blue"] {
+    --history-bg-hover: #016ab7;
+    --history-bg-active: #02487a;
+    --history-button-line: #034a81;
+    --history-button-hover: #046ab8;
+    --history-radius-small: 24px 2px;
+}
+
+.menu {
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    margin: 0 4px 0;
+}
 
 .history {
     grid-area: history;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     max-width: 320px;
 }
 
@@ -11,6 +45,7 @@
     display: flex;
     flex-direction: row;
     justify-content: start;
+    margin: 0;
 }
 
 .history-button {
@@ -18,26 +53,57 @@
     font-size: 16px;
     padding: 8px 20px 8px 0;
     cursor: pointer;
-    transition: color 0.2s;
+    transition: color 0.4s;
 }
 
 .history-button:hover {
-    color: orange;
+    color: var(--history-button-hover);
 }
 
 #history1 {
-    text-decoration: underline orange 2px;
+    text-decoration: underline var(--history-button-line) 2px;
     text-underline-offset: 6px;
 }
 
 .history-button:active {
-    color: rgb(161, 105, 0);
+    color: var(--history-button-active);
 }
 
 .history-text {
-    margin-top: 28px;
+    width: 1fr;
+    padding: 20px 20px;
+    margin-top: 16px;
     font-weight: bold;
     font-size: 14px;
+    transition: color 0.4s;
+    border-radius: var(--history-radius-small);
+}
+
+.history-text:hover,
+.trash-bin:hover {
+    background-color: var(--history-bg-hover);
+    border-radius: var(--history-radius-small);
+
+
+}
+
+.history-text:active,
+.trash-bin:active {
+    background-color: var(--history-bg-active);
+    border-radius: var(--history-radius-small);
+}
+
+.trash-bin {
+    width: 48px;
+    height: 48px;
+    background-image: var(--history-trash-image);
+    background-repeat: no-repeat;
+    padding: 20px 20px;
+    align-self: flex-end;
+}
+
+.trash-bin:last-child {
+    margin-top: auto;
 }
 
 @media (max-width:640px) {

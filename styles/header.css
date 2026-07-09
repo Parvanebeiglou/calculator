@@ -1,14 +1,16 @@
 [data-theme="dark"] {
     --header-bg-color: #3b3b3b;
     --header-bg-active: #4d4d4d;
+    --header-radius-small:  2px 2px 12px 12px;
     --header-max-image: url(../img/checkbox-blank-outline-dark.svg);
     --header-min-image: url(../img/minus-dark.svg);
-    --header-close-image:url(../img/multiplication-dark.svg);
+    --header-close-image: url(../img/multiplication-dark.svg);
 }
 
 [data-theme="green"] {
     --header-bg-hover: #4f9541;
     --header-bg-active: #3c7132;
+    --header-radius-small: 20px;
 }
 
 [data-theme="blue"] {

@@ -3,6 +3,7 @@
     --menu-minimize-image: url(../img/minimaze-dark.svg);
     --menu-bg-hover:#3b3b3b;
     --menu-bg-active:#4d4d4d;
+    --menu-radius-small: 2px 12px 12px 2px;
 }
 [data-theme="green"] {
     --menu-bg-hover:#4f9541;

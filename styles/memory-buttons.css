@@ -1,8 +1,9 @@
 [data-theme="dark"] {
-    --memory-bg: #2b2b2b;
+    --memory-bg: #1e1e1e;
     --memory-hover: #3b3b3b;
     --memory-active: #4d4d4d;
-    --memory-text:white;
+    --memory-text: white;
+    --memory-radius-small:20px 20px 2px 2px;
 }
 
 [data-theme="green"] {
@@ -39,6 +40,7 @@
     font-family: var(--font-family);
     font-size: 13px;
     font-weight: bold;
+    color: var(--memory-text);
     border-radius: var(--memory-radius-small);
     cursor: pointer;
     transition: background-color 0.4s;
