@@ -74,7 +74,6 @@
 }
 
 .functional-key {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--key-bg-functional);
     font-size: 20px;
     border-radius: var(--keys-radius-small);

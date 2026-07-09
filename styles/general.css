@@ -40,12 +40,12 @@
     --menu-bg-active: rgb(140, 140, 140);
     --menu-radius-small: 2px;
     --history-bg-hover: rgb(174, 174, 174);
-    --history-bg-active:rgb(140, 140, 140);
-    --history-button-hover:orange;
-    --history-button-line:orange;
-    --history-button-active:rgb(161, 105, 0);
-    --history-radius-small:2px;
-    --history-trash-image:url(../img/delete-outline.svg);
+    --history-bg-active: rgb(140, 140, 140);
+    --history-button-hover: orange;
+    --history-button-line: orange;
+    --history-button-active: rgb(161, 105, 0);
+    --history-radius-small: 2px;
+    --history-trash-image: url(../img/delete-outline.svg);
 }
 
 /*Dark*/

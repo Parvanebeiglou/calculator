@@ -1,7 +1,7 @@
 [data-theme="dark"] {
     --header-bg-color: #3b3b3b;
     --header-bg-active: #4d4d4d;
-    --header-radius-small:  2px 2px 12px 12px;
+    --header-radius-small: 2px 2px 12px 12px;
     --header-max-image: url(../img/checkbox-blank-outline-dark.svg);
     --header-min-image: url(../img/minus-dark.svg);
     --header-close-image: url(../img/multiplication-dark.svg);
