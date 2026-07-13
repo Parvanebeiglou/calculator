@@ -75,15 +75,16 @@
       <div class="trash-bin"></div>
     </div>
     <script>
-      const root = document.documentElement;
-      const toggle = document.getElementById('theme-toggle');
-      const themes = ['light', 'dark', 'green', 'blue'];
-      let index = 0;
-
-      toggle.addEventListener('click', () => {
-        index = (index + 1) % themes.length;
-        root.setAttribute('data-theme', themes[index]);
-      });
+      const themeButton = document.getElementById('theme-toggle');
+      const availableThemes = ['light', 'dark', 'green', 'blue'];
+      let currentThemePosition = 0;
+      function switchTheme() {
+        currentThemePosition =
+          (currentThemePosition + 1) % availableThemes.length;
+        const newTheme = availableThemes[currentThemePosition];
+        document.documentElement.setAttribute('data-theme', newTheme);
+      }
+      themeButton.addEventListener('click', switchTheme);
     </script>
   </body>
 </html>
