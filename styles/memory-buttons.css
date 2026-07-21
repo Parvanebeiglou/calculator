@@ -62,6 +62,20 @@
 .enable-memory-button:active {
     background-color: var(--memory-active);
 }
+.memory-enabled {
+    background-color: var(--memory-bg);
+    color: var(--memory-text);
+    cursor: pointer;
+    opacity: 1;
+}
+
+.memory-disabled {
+    background-color: var(--memory-bg);
+    color: var(--memory-disable);
+    cursor: default;
+    opacity: 0.5;
+}
+
 
 @media (max-width:740px) {
     .memory-buttons-container {

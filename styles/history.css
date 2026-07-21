@@ -60,13 +60,12 @@
     color: var(--history-button-hover);
 }
 
-#history1 {
-    text-decoration: underline var(--history-button-line) 2px;
-    text-underline-offset: 6px;
-}
+
 
 .history-button:active {
     color: var(--history-button-active);
+    text-decoration: underline var(--history-button-line) 2px;
+    text-underline-offset: 6px;
 }
 
 .history-text {

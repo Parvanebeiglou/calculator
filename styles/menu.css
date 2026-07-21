@@ -65,7 +65,7 @@
     transition: background-color 0.4s;
 }
 
-.result-number {
+#result {
     grid-area: result-number;
     font-size: 64px;
     text-align: right;
