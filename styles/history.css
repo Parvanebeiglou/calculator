@@ -60,8 +60,6 @@
     color: var(--history-button-hover);
 }
 
-
-
 .history-button:active {
     color: var(--history-button-active);
     text-decoration: underline var(--history-button-line) 2px;
@@ -82,8 +80,6 @@
 .trash-bin:hover {
     background-color: var(--history-bg-hover);
     border-radius: var(--history-radius-small);
-
-
 }
 
 .history-text:active,

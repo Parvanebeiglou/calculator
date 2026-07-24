@@ -1,22 +1,12 @@
-const resultEl = document.getElementById("result");
-const operators = ["+", "-", "*", "/"];
+const operators = ['+', '-', '*', '/'];
 
-function updateDisplay() {
-  resultEl.innerHTML = calculation || "0";
-  calcState.calculation = calculation;
-  saveState();
-}
-
-updateDisplay();
-
-// ---------- INPUT ----------
 function press(value) {
   const last = calculation.slice(-1);
   const isOperator = (v) => operators.includes(v);
 
-  if (value === ".") {
+  if (value === '.') {
     const parts = calculation.split(/[+\-*/]/);
-    if (parts[parts.length - 1].includes(".")) return;
+    if (parts[parts.length - 1].includes('.')) return;
   }
 
   if (isOperator(last) && isOperator(value)) {
@@ -29,17 +19,16 @@ function press(value) {
 }
 
 function currentValue() {
-  return eval(calculation || "0");
+  return eval(calculation || '0');
 }
 
-// ---------- OPERATIONS ----------
 function clearAll() {
-  calculation = "";
+  calculation = '';
   updateDisplay();
 }
 
 function clearEntry() {
-  calculation = calculation.replace(/(\d+\.?\d*)$/, "");
+  calculation = calculation.replace(/(\d+\.?\d*)$/, '');
   updateDisplay();
 }
 
@@ -60,8 +49,8 @@ function cube() {
 
 function squareRoot() {
   const val = currentValue();
-  if (val < 0) {
-    calculation = "";
+  if (val < 0 || isNaN(val)) {
+    calculation = '';
     updateDisplay();
     return;
   }
@@ -75,8 +64,8 @@ function percent() {
 }
 
 function changeSign() {
-  calculation = calculation.replace(/(\d+\.?\d*)$/, (m) =>
-    (Number(m) * -1).toString()
+  calculation = calculation.replace(/(\d+\.?\d*)$/, (match) =>
+    (Number(match) * -1).toString(),
   );
   updateDisplay();
 }
@@ -84,8 +73,8 @@ function changeSign() {
 function reciprocal() {
   const result = 1 / currentValue();
   if (!Number.isFinite(result)) {
-    calculation = "";
-    resultEl.innerHTML = "Error";
+    calculation = '';
+    resultEl.innerHTML = 'Error';
     return;
   }
   calculation = result.toString();

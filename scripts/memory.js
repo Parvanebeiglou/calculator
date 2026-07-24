@@ -4,37 +4,6 @@ const memoryTab = document.getElementById("memoryTab");
 const mcBtn = document.getElementById("mc");
 const mrBtn = document.getElementById("mr");
 
-function updateMemoryPanel() {
-  if (calcState.memory.length === 0) {
-    memoryPanel.innerHTML = "Memory is empty";
-    return;
-  }
-
-  memoryPanel.innerHTML = calcState.memory
-    .map((value, index) => `<div>M${index + 1}: ${value}</div>`)
-    .join("");
-}
-
-function updateMemoryButtons() {
-  if (calcState.memory.length === 0) {
-    mcBtn.classList.remove("enable-memory-button");
-    mrBtn.classList.remove("enable-memory-button");
-
-    mcBtn.classList.add("disable-memory-button");
-    mrBtn.classList.add("disable-memory-button");
-  } else {
-    mcBtn.classList.remove("disable-memory-button");
-    mrBtn.classList.remove("disable-memory-button");
-
-    mcBtn.classList.add("enable-memory-button");
-    mrBtn.classList.add("enable-memory-button");
-  }
-}
-
-updateMemoryPanel();
-updateMemoryButtons();
-
-// ---------- MEMORY FUNCTIONS ----------
 function memoryStore() {
   calcState.memory.push(currentValue());
   saveState();
@@ -71,6 +40,33 @@ function memoryRecall() {
   calcState.calculation = calculation;
   saveState();
   updateDisplay();
+}
+
+function updateMemoryPanel() {
+  if (calcState.memory.length === 0) {
+    memoryPanel.innerHTML = "Memory is empty";
+    return;
+  }
+
+  memoryPanel.innerHTML = calcState.memory
+    .map((value, index) => `<div>M${index + 1}: ${value}</div>`)
+    .join("");
+}
+
+function updateMemoryButtons() {
+  if (calcState.memory.length === 0) {
+    mcBtn.classList.remove("enable-memory-button");
+    mrBtn.classList.remove("enable-memory-button");
+
+    mcBtn.classList.add("disable-memory-button");
+    mrBtn.classList.add("disable-memory-button");
+  } else {
+    mcBtn.classList.remove("disable-memory-button");
+    mrBtn.classList.remove("disable-memory-button");
+
+    mcBtn.classList.add("enable-memory-button");
+    mrBtn.classList.add("enable-memory-button");
+  }
 }
 
 memoryTab.addEventListener("click", () => {

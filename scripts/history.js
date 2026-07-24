@@ -1,19 +1,17 @@
-const historyBox = document.querySelector(".history-text");
-const historyPanel = document.getElementById("historyPanel");
-const historyTab = document.getElementById("historyTab");
+const historyBox = document.querySelector('.history-text');
+const historyPanel = document.getElementById('historyPanel');
+const historyTab = document.getElementById('historyTab');
 
 function updateHistoryPanel() {
   if (calcState.history.length === 0) {
-    historyBox.innerHTML = "There is no history here yet";
+    historyBox.innerHTML = 'There is no history here yet';
     return;
   }
 
   historyBox.innerHTML = calcState.history
     .map((item) => `<div class="history-item">${item}</div>`)
-    .join("");
+    .join('');
 }
-
-updateHistoryPanel();
 
 function equals() {
   try {
@@ -22,17 +20,19 @@ function equals() {
 
     calcState.history.push(`${calculation} = ${result}`);
     saveState();
+
     updateHistoryPanel();
 
     calculation = result.toString();
     calcState.calculation = calculation;
     saveState();
+
     updateDisplay();
   } catch {
-    calculation = "";
-    calcState.calculation = "";
+    calculation = '';
+    calcState.calculation = '';
     saveState();
-    resultEl.innerHTML = "Error";
+    resultEl.innerHTML = 'Error';
   }
 }
 
@@ -42,8 +42,8 @@ function clearHistory() {
   updateHistoryPanel();
 }
 
-historyTab.addEventListener("click", () => {
-  historyPanel.style.display = "block";
-  memoryPanel.style.display = "none";
+historyTab.addEventListener('click', () => {
+  historyPanel.style.display = 'block';
+  memoryPanel.style.display = 'none';
   updateHistoryPanel();
 });

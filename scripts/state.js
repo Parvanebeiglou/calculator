@@ -1,18 +1,31 @@
+// ---------- LOAD STATE ----------
 const saved = localStorage.getItem("calculatorState");
 
-window.calcState = saved
+let calcState = saved
   ? JSON.parse(saved)
   : {
-      theme: "light",
       history: [],
       memory: [],
       calculation: "",
     };
 
-window.saveState = function () {
+let calculation = calcState.calculation || "";
+
+function saveState() {
   localStorage.setItem("calculatorState", JSON.stringify(calcState));
-};
+}
 
-window.calculation = calcState.calculation || "";
+document.documentElement.setAttribute("data-theme", "light");
 
-document.documentElement.setAttribute("data-theme", calcState.theme);
+const resultEl = document.getElementById("result");
+
+function updateDisplay() {
+  resultEl.innerHTML = calculation || "0";
+  calcState.calculation = calculation;
+  saveState();
+}
+
+updateDisplay();
+updateHistoryPanel();
+updateMemoryPanel();
+updateMemoryButtons();
